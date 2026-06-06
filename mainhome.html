@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Helping Hand Foundation supports vulnerable families with food, education, healthcare, and dignity-first community care.">
+  <title>Helping Hand Foundation</title>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <!-- <script src="https://checkout.razorpay.com/v1/checkout.js"></script> -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <!-- <header class="site-header" style="display:none">
+    <a class="brand" href="#top" aria-label="Helping Hand Foundation home">
+      <span class="brand-mark"><i class="ri-hand-heart-line"></i></span>
+      <span>Helping Hand Foundation</span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#programs">Programs</a>
+      <a href="#impact">Impact</a>
+      <a href="#stories">Stories</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="header-donate" type="button" onclick="donate(this)">
+        <i class="ri-heart-3-line"></i>
+        Donate
+      </button>
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-controls="mobileDrawer" aria-expanded="false">
+        <i class="ri-menu-3-line"></i>
+      </button>
+    </div>
+  </header>
+
+  <div class="drawer-backdrop" data-close-drawer></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-top">
+      <a class="brand" href="#top" data-close-drawer>
+        <span class="brand-mark"><i class="ri-hand-heart-line"></i></span>
+        <span>Helping Hand Foundation</span>
+      </a>
+      <button class="drawer-close" type="button" aria-label="Close navigation menu" data-close-drawer>
+        <i class="ri-close-line"></i>
+      </button>
+    </div>
+    <nav class="drawer-nav" aria-label="Mobile navigation">
+      <a href="#programs" data-close-drawer><span>01</span>Programs</a>
+      <a href="#impact" data-close-drawer><span>02</span>Impact</a>
+      <a href="#stories" data-close-drawer><span>03</span>Stories</a>
+      <a href="#contact" data-close-drawer><span>04</span>Contact</a>
+    </nav>
+    <div class="drawer-card">
+      <p>Make a quick UPI donation and help us support the next family faster.</p>
+      <button class="primary-btn drawer-donate" type="button" onclick="donate(this)">
+        <i class="ri-hand-heart-line"></i>
+        Donate Now
+      </button>
+    </div>
+  </aside> -->
+
+  <!-- <button class="floating-donate" type="button" onclick="donate(this)" aria-label="Donate now">
+    <i class="ri-hand-heart-line"></i>
+  </button> -->
+  <a class="floating-donate donate_btn primary-btn text-decoration-none"
+            href="upi://pay?pa=8586042076@upi&pn=HelpingHand&am=100.00&cu=INR&tn=Thank%20you%20for%20supporting%20our%20cause"
+            target="_blank">
+                <i class="ri-hand-heart-line"></i>
+  </a>
+
+  <main id="top">
+    <section class="hero">
+      <div class="banner">
+        <article class="hero-slide">
+          <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1800&q=80"
+            alt="">
+        </article>
+        <article class="hero-slide">
+          <img src="https://images.unsplash.com/photo-1469571486292-b53601012a9d?auto=format&fit=crop&w=1800&q=80"
+            alt="">
+        </article>
+        <article class="hero-slide">
+          <video muted loop autoplay playsinline src="/video/3695933-hd_1920_1080_24fps.mp4" type="video/mp4"></video>
+        </article>
+      </div>
+
+      <div class="hero-content reveal">
+        <p class="eyebrow">Food. Education. Healthcare. Hope.</p>
+        <h1>Real help for families who need someone to stand with them.</h1>
+        <p class="hero-copy">Helping Hand Foundation is a community NGO supporting children, daily-wage families,
+          elderly people, and patients through practical, transparent aid.</p>
+        <div class="donation-panel">
+          <label for="amount">Choose your donation amount</label>
+          <!-- <div class="amount-row">
+            <button type="button" data-amount="250">Rs.250</button>
+            <button type="button" data-amount="500">Rs.500</button>
+            <button type="button" data-amount="1000">Rs.1000</button>
+          </div> -->
+          <div class="custom-amount">
+            <span>Rs.</span>
+            <input class="amount_input" type="number" id="amount" min="1" placeholder="Enter amount" value="100">
+          </div>
+          <!-- <button class="primary-btn" type="button" onclick="donate(this)">
+            <i class="ri-secure-payment-line"></i>
+            Donate Securely
+          </button> -->
+
+          <a class="donate_btn primary-btn"
+            href="upi://pay?pa=8586042076@upi&pn=HelpingHand&am=100.00&cu=INR&tn=Thank%20you%20for%20supporting%20our%20cause"
+            target="_blank" onclick="donate(this); return false;">
+            Donate
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section intro-section">
+      <span class="section-kicker">Our Mission</span>
+      <div class="intro-grid">
+        <h2 class="heading">We deliver immediate relief and long-term support with dignity, not pity.</h2>
+        <p>Every family we meet has a different story. Some need groceries tonight, some need school supplies before
+          Monday, and some need help reaching a hospital. We listen first, verify needs locally, and then send help
+          where it can make a measurable difference.</p>
+      </div>
+    </section>
+
+    <section class="section programs" id="programs">
+      <div class="section-heading">
+        <span class="section-kicker">What We Do</span>
+        <h2>Focused programs for everyday emergencies.</h2>
+      </div>
+      <div class="program-grid">
+        <article class="program-card reveal">
+          <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=900&q=80"
+            alt="Prepared meals and groceries for relief work">
+          <div>
+            <i class="ri-bowl-line"></i>
+            <h3>Meals and Grocery Kits</h3>
+            <p>Dry ration kits, cooked meals, and nutrition support for low-income households and street communities.
+            </p>
+          </div>
+        </article>
+        <article class="program-card reveal">
+          <img src="https://images.unsplash.com/photo-1497486751825-1233686d5d80?auto=format&fit=crop&w=900&q=80"
+            alt="Children studying in a classroom">
+          <div>
+            <i class="ri-book-open-line"></i>
+            <h3>Education Support</h3>
+            <p>School fees, notebooks, uniforms, digital learning help, and mentoring for children at risk of dropping
+              out.</p>
+          </div>
+        </article>
+        <article class="program-card reveal">
+          <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=80"
+            alt="Doctor consulting with a patient">
+          <div>
+            <i class="ri-first-aid-kit-line"></i>
+            <h3>Medical Aid</h3>
+            <p>Medicine, clinic visits, blood-donor coordination, patient travel, and emergency treatment assistance.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="impact-band" id="impact">
+      <div class="impact-copy reveal">
+        <span class="section-kicker">Impact</span>
+        <h2>Small donations become practical help within the community.</h2>
+        <p>We keep support local, simple, and accountable so donors can understand where help goes and families receive
+          it quickly.</p>
+      </div>
+      <div class="impact-stats">
+        <div><strong>12,800+</strong><span>meals served</span></div>
+        <div><strong>640+</strong><span>children supported</span></div>
+        <div><strong>310+</strong><span>medical cases assisted</span></div>
+        <div><strong>38</strong><span>community drives</span></div>
+      </div>
+    </section>
+
+    <section class="section gallery-section">
+      <div class="section-heading">
+        <span class="section-kicker">Field Work</span>
+        <h2>Photos from the work your support makes possible.</h2>
+      </div>
+      <div class="image-grid">
+        <figure class="wide">
+          <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=1200&q=80"
+            alt="Volunteer helping at a community distribution">
+          <figcaption>Relief distribution with local volunteers</figcaption>
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1609139003551-ee40f5f73ec0?auto=format&fit=crop&w=900&q=80"
+            alt="Volunteers packing donation boxes">
+          <figcaption>Weekly grocery-kit packing</figcaption>
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&w=900&q=80"
+            alt="Children smiling outdoors">
+          <figcaption>Children's education support</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="video-section">
+      <video muted loop autoplay playsinline src="/video/3695949-hd_1920_1080_24fps.mp4" type="video/mp4"></video>
+      <div class="video-overlay reveal">
+        <span class="section-kicker">Volunteer With Us</span>
+        <h2>Your time can be as powerful as your donation.</h2>
+        <p>Join food drives, teach weekend classes, help with field verification, or support our helpline and donor
+          updates.</p>
+        <a class="secondary-btn" href="#contact">
+          <i class="ri-user-heart-line"></i>
+          Become a Volunteer
+        </a>
+      </div>
+    </section>
+
+    <section class="section stories" id="stories">
+      <div class="section-heading">
+        <span class="section-kicker">Human Stories</span>
+        <h2>Care feels real when it reaches a real person.</h2>
+      </div>
+      <div class="story-contain">
+        <article class="story reveal">
+          <p>"The ration kit helped us get through the week after my work stopped. It gave us breathing space."</p>
+          <span>Ramesh, daily-wage worker</span>
+        </article>
+        <article class="story reveal">
+          <p>"My daughter received books and school shoes. She went back to class with confidence."</p>
+          <span>Farzana, parent</span>
+        </article>
+        <article class="story reveal">
+          <p>"The medicine support arrived on time. My father did not miss his treatment."</p>
+          <span>Neha, caregiver</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section donate-section">
+      <div class="donate-copy">
+        <span class="section-kicker">Give Today</span>
+        <h2>Pick an amount. We turn it into food, learning, care, and dignity.</h2>
+      </div>
+      <div class="donation-panel donation-panel-light">
+        <label for="footerAmount">Donation amount</label>
+        <div class="amount-row">
+          <button type="button" data-amount="250">Rs.250</button>
+          <button type="button" data-amount="500">Rs.500</button>
+          <button type="button" data-amount="1000">Rs.1000</button>
+        </div>
+        <div class="custom-amount">
+          <span>Rs.</span>
+          <input type="number" id="footerAmount" min="1" placeholder="Enter amount">
+        </div>
+        
+          <!-- <button class="primary-btn" type="button" onclick="donate(this)">
+            <i class="ri-secure-payment-line"></i>
+            Donate Securely
+          </button> -->
+
+          <a class="donate_btn primary-btn"
+            href="upi://pay?pa=8586042076@upi&pn=HelpingHand&am=100.00&cu=INR&tn=Thank%20you%20for%20supporting%20our%20cause"
+            target="_blank" onclick="donate(this); return false;">
+            Donate
+          </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="footer-container">
+      <div class="info">
+        <h3>Helping Hand Foundation</h3>
+        <p>A non-profit NGO helping vulnerable families with food, education, medical care, and emergency support.</p>
+        <p class="footer-contact"><i class="ri-map-pin-line"></i> Community office: Delhi NCR, India</p>
+        <p class="footer-contact"><i class="ri-mail-line"></i> hello@helpinghand.org</p>
+      </div>
+
+      <div class="social_links">
+        <h4>Follow Us</h4>
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="Twitter">Twitter</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+      </div>
+
+      <div class="more_info">
+        <h4>Support Our Cause</h4>
+        <p>Your donation helps us move quickly when a family needs food, medicine, school support, or emergency help.
+        </p>
+        <button class="donate-btn" type="button" onclick="donate(this)">Donate Now</button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollToPlugin.min.js"></script>
+  <script src="/script.js"></script>
+</body>
+
+</html>
