@@ -280,7 +280,7 @@ input {
 }
 
 .banner,
-.slick-list,
+.slick-list,nn
 .slick-track,
 .hero-slide {
   height: 100vh;
@@ -325,6 +325,7 @@ input {
   transform: translateY(-65%);
   width: min(650px, calc(100% - 48px));
   color: white;
+  margin-top:5%;
 }
 
 .eyebrow,
